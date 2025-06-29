@@ -14,8 +14,8 @@ public class BepoApplication {
 
 		// Set them as system properties for Spring Boot to use
 		System.setProperty("server.port", dotenv.get("PORT", "8080"));
-		System.setProperty("spring.datasource.username", dotenv.get("DB_USERNAME", "postgres"));
-		System.setProperty("spring.datasource.password", dotenv.get("DB_PASSWORD", "admin"));
+		System.setProperty("spring.datasource.username", dotenv.get("DB_USERNAME", "bepodb_user"));
+		System.setProperty("spring.datasource.password", dotenv.get("DB_PASSWORD", "E1XgZbH5Xs5cTRrUJkpW3gS6P1zOikHA"));
 
 		SpringApplication.run(BepoApplication.class, args);
 	}
