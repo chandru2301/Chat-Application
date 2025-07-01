@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@stomp/stompjs": "^7.1.1",
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
+    "sockjs-client": "^1.6.1"
+  }
+}

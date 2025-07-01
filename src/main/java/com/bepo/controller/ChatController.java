@@ -25,7 +25,7 @@ public class ChatController {
     public void sendMessage(@DestinationVariable String roomId, @Payload ChatMessage chatMessage) {
         chatMessage.setId(UUID.randomUUID().toString());
         chatMessage.setTimestamp(LocalDateTime.now());
-        messagingTemplate.convertAndSend("/topic/public/" + roomId, chatMessage);
+        messagingTemplate.convertAndSend("/topic/public/" + roomId, chatMessage); // where all subs users receive an update
     }
 
     @MessageMapping("/chat.addUser/{roomId}")
