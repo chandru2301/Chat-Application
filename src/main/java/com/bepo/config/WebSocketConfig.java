@@ -18,7 +18,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws")
-                .setAllowedOriginPatterns("*") // For development; restrict in production
-                .withSockJS(); // Fallback options for browsers that don't support WebSocket
+                .setAllowedOrigins("http://localhost:5173", "https://bepo-chat-verse.netlify.app")
+                .withSockJS();
     }
 }
